@@ -1,0 +1,65 @@
+/* Clases para el contenedor principal */
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Clases de tamaño */
+.spinner-small {
+  height: 1.5rem;  /* Equivale a h-6 (24px) */
+  width: 1.5rem;
+}
+.spinner-medium {
+  height: 2rem;  /* Equivale a h-8 (32px) */
+  width: 2rem;
+}
+.spinner-large {
+  height: 3rem;  /* Equivale a h-12 (48px) */
+  width: 3rem;
+}
+
+/* Clases de color */
+.spinner-primary {
+  color: #3b82f6;  /* Equivale a text-blue-500 */
+}
+.spinner-secondary {
+  color: #6b7280;  /* Equivale a text-gray-500 */
+}
+.spinner-accent {
+  color: #f97316;  /* Equivale a text-orange-500 (Dragon Ball) */
+}
+
+/* Animación y estilos del SVG */
+.spinner-svg {
+  animation: spin 1s linear infinite;
+}
+.spinner-circle {
+  opacity: 0.25;
+}
+.spinner-path {
+  opacity: 0.75;
+}
+
+/* Animación keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Texto oculto para accesibilidad */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

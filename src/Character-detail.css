@@ -1,0 +1,100 @@
+/* presentation/components/styles/character-detail.css */
+.character-detail-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.character-detail-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .character-detail-card {
+    height: 100vh;
+    flex-direction: row;
+  }
+}
+
+.character-image-container {
+  flex: 1;
+  padding: 2rem;
+  background: rgb(215, 218, 222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black
+}
+
+.character-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.character-info {
+  flex: 1;
+  padding: 1px 10px 0 25px;
+  
+}
+
+.character-name {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.character-race {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.character-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  background:rgb(215, 218, 222);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.character-descriptionDetail,
+.character-affiliation {
+  margin: 1.5rem 0;
+}
+
+.character-descriptionDetail h3,
+.character-affiliation h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}

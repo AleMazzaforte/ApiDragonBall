@@ -1,0 +1,189 @@
+/* presentation/components/styles/character-card.css */
+
+/* Estilos base para las cards */
+.character-card {
+  width: 280px;
+  height: 4500px
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 12px;
+  
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 15px;
+  position: relative;
+  border: none;
+  border: 1px solid rgba(180, 156, 25, 0.3);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Efecto hover */
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(231, 76, 60, 0.3);
+}
+
+/* presentation/components/styles/character-card.css */
+
+/* Contenedor de la imagen - MODIFICADO */
+.character-image-container1 {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 3px solid #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Alinea al personaje desde abajo */
+}
+
+/* Imagen del personaje - MODIFICADO */
+.character-image {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom; /* Fija los pies en la parte inferior */
+  transition: transform 0.5s ease;
+}
+
+/* Versión alternativa si las imágenes son muy variadas en tamaño */
+.character-image-alt {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.character-card:hover {
+  transform: scale(1.1);
+}
+
+/* Badge de raza */
+.race-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido de la card */
+.character-content {
+  padding: -10px 20px 20px;
+  text-align: center;
+}
+
+/* Nombre del personaje */
+.character-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-top: -100px
+  margin-bottom: 10px;
+  font-family: 'Dragon Ball', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Descripción */
+.character-description {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Estadísticas */
+.character-stats1 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.stat-item1 {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #95a5a6;
+  text-transform: uppercase;
+}
+
+.character-stats1 {
+  padding-bottom:15px
+}
+
+/* Botón de favorito */
+.favorite-button {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+  
+}
+
+/* Efecto de energía Saiyajin */
+.saiyan-card {
+  animation: saiyan-glow 2s infinite alternate;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+@keyframes saiyan-glow {
+  from {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  }
+}
+
+
+
+
+/* Efecto de energía */
+.energy-aura {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,215,0,0.3) 0%, rgba(255,215,0,0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.saiyan-card:hover .energy-aura {
+  opacity: 1;
+}
